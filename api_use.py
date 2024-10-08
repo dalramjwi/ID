@@ -57,7 +57,7 @@ def fetch_fairy_tale_texts(titles):
                 'format': 'json'
             }
 
-            response = requests.get(WIKISOURCE_API_URL, params=params)
+            response = requests.get(WIKIPEDIA_API_URL, params=params)
             response.raise_for_status()
             data = response.json()
 
@@ -83,5 +83,5 @@ def fetch_fairy_tale_texts(titles):
 
 # 실행 예시
 fetch_fairy_tales()
-titles = ["Alice's Adventures in Wonderland", "Peter Pan"]
+titles = ["Sugar Apple Fairy Tale"]
 fetch_fairy_tale_texts(titles)
